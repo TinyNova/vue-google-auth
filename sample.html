@@ -40,7 +40,7 @@ module.exports = {
       this.toggleLoading()
       this.resetResponse()
 
-      this.$http.post('http://your-backend-server.com/auth/google', { code: authorizationCode, redirect_uri: 'postmessage' }).then(function (response) {
+      this.$http.post('http://your-backend-server.com/auth/google', { code: authorizationCode.code, redirect_uri: 'postmessage' }).then(function (response) {
         if (response.body) {
           var data = response.body
 
