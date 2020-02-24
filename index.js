@@ -53,7 +53,7 @@
           })
         } else {
           window.gapi.auth2.getAuthInstance().grantOfflineAccess({'redirect_uri': 'postmessage'}).then(function (response) {
-            successCallback(response.code)
+            successCallback(response)
           }, function (error) {
             errorCallback(error)
           })
